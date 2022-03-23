@@ -1,17 +1,13 @@
-import Main from "components/Main";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+import BackOfficePage from '@/pages/BackOffice'
 
 export function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route path="/about">
-          <Main description="This is the About Page" />
-        </Route>
-      </Switch>
-    </Router>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="back-office" element={<BackOfficePage />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }

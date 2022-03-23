@@ -1,0 +1,8 @@
+build
+coverage
+data
+docs
+dump
+node_modules
+scripts
+*.hbs
